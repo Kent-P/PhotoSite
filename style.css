@@ -1,0 +1,42 @@
+/* Importing a Google Font */
+  @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Wavefont:wght@400;700&display=swap');
+
+  body {
+    background-color: rgb(133, 140, 146);
+  }
+
+  h1 {
+    font-family: 'Wavefont', cursive;
+    /* H1 elements are bold by default so changing font weight is not necessary */
+
+    text-transform: uppercase;
+    letter-spacing: 17px;
+    font-size: 50px;
+    text-align: center;
+    border-bottom: 5px solid #ccc;
+    padding-bottom: 10px;
+
+    /* Setting the width in the h1 so the bottom border will be displayed over the two middle images */
+    /*  */
+    /* 45 + 3.33 = 48.33*/
+    width: 48.33%;
+
+    /* Set "auto" for left and right margin centers the h1 element horizontally inside the body element */
+margin: 20px auto;
+  }
+
+  img {
+    /* Setting the width on the images to 100% so they will shrink down to only take up the space assigned to them in the CSS Grid below */
+    width: 100%;
+  }
+
+  #main {
+    display: grid;
+
+    grid-template-columns: repeat(4, 22.5%);
+    
+    column-gap: 3.33%;
+
+    /* Setting the row-gap to twice the percentage amount of the column-gap because the height of the grid container (AKA The Div element) is about half of the width */
+    row-gap: 6.66%;
+  }
